@@ -14,13 +14,19 @@ runML <- function(inpath, op, corr){
     }else{
 
 # Deal with the directories we are interested in which is any sub-directry of the directory the 
-# script was launched from      
-      try(name <- unlist(strsplit(subdir,"/")),silent=FALSE)
+# script was launched from windows includes current working directory with the dir name hence name[2].  
+      try(name <- unlist(strsplit(subdir,fs)),silent=FALSE)
       message(name)
-      homepath = paste(inpath,name, sep="/")
-      message('homepath is ',homepath)
+      if(os=='unix'){
+	      homepath = paste(inpath,name, sep=fs)
+	    }else{
+	      homepath = paste(inpath,name[2], sep=fs)
+	    }
+		  message('homepath is ',homepath)
+		  setwd(homepath)
+
       
-# Source all callable functions
+# Source all callable functions these should be in each sub-directory of data
       source("cross_validate.R")
       source("utilities.R")
       source("run.R")
