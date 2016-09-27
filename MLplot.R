@@ -2,7 +2,6 @@
 # Created by J. L. McDonagh 2015 at the Univeristy of St Andrews/Univeristy of Manchester UK                                                                                     #
 # path1 should be the path where this script is                                                                                                                                  #
 # numsample should be the number of predicted quanities 
-# property should be a text label for the graph axis and title
 ##################################################################################################################################################################################
 
 MLplot <- function(path1,numsample){
