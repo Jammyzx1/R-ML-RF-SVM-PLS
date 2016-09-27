@@ -1,4 +1,4 @@
-runML <- function(inpath, op, corr){
+runML <- function(inpath, op, corr,numdatapoints){
 
 # Get the os and os file separator
   os <- .Platform$OS.type
@@ -68,7 +68,7 @@ runML <- function(inpath, op, corr){
           datapath <- paste(homepath,dir, sep=fs)
           setwd(datapath)
           var_imp()
-          MLplot(datapath,numdatapoints,property)
+          MLplot(datapath,numdatapoints)
         }
         
       }
