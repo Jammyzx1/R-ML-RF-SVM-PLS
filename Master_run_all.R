@@ -1,4 +1,4 @@
-runML <- function(inpath, op, corr,numdatapoints){
+runML <- function(inpath, op, corr, numdatapoints){
 
 # Get the os and os file separator
   os <- .Platform$OS.type
