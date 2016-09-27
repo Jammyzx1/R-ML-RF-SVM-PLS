@@ -208,8 +208,8 @@ MLplot <- function(path1,numsample,property){
       stop("Counter past 10")
     }
   }
-  lab_x <- paste("Experimental ", property1," (kJ/mol)")
-  lab_y <- paste("Predicted ",property1, " (kJ/mol)")
+  lab_x <- paste("Experimental ", property1)
+  lab_y <- paste("Predicted ",property1)
   compls <- data.frame(pls1,pls2,pls3,pls4,pls5,pls6,pls7,pls8,pls9,pls10)
   for(i in (1:numsample)){
     sumav = sum(compls[i,3],compls[i,10],compls[i,17],compls[i,24],compls[i,31],compls[i,38],compls[i,45],compls[i,52],compls[i,59],compls[i,66])
