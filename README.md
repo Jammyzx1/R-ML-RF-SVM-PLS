@@ -72,10 +72,10 @@ The R function Master_run_all.R is provided to run the code with all three scali
 
 To run a over the dub-directories dataset with all three scaling options, an inter-descriptor correlation cutoff of 0.75 and 200 datapoints in each dataset in one command do the following: 
 
-path <- 'path/to/Master_run_all.R/script'
-setwd(path)
-source("Master_run_all.R")
-runML(path, 3, 0.75, 200)
+    path <- 'path/to/Master_run_all.R/script'
+    setwd(path)
+    source("Master_run_all.R")
+    runML(path, 3, 0.75, 200)
 
 To run only certain scaling options edit the last if loop of the script as suggested in the script.
 
@@ -83,13 +83,13 @@ To run only certain scaling options edit the last if loop of the script as sugge
 
 First install the R libraries listed above, then execute in the R shell:
 
-path <- "/path/to/the/R/scripts/"
-setwd(path)
-source("run.R")
-source("utilities.R")
-source("cross_validate.R")
-data <- read.table("test_data_8mol.csv", sep=",", header=T, row.names=1)
-run(data, 1, "/path/to/the/R/scripts/output/")
+    path <- "/path/to/the/R/scripts/"
+    setwd(path)
+    source("run.R")
+    source("utilities.R")
+    source("cross_validate.R")
+    data <- read.table("test_data_8mol.csv", sep=",", header=T, row.names=1)
+    run(data, 1, "/path/to/the/R/scripts/output/")
 
 In this example, the path where to find the scripts is set to "/path/to/the/R/scripts/" with the 'setwd' command (under Windows the path would need to be written as: "C:\\path\\to\\the\\R\\scripts\\"). 
 The scripts are then loaded with the 'source' command and the data is read from the example file test_data_8mol.csv, which is comma separated, has a header and contains the row names in the first column.
@@ -119,8 +119,8 @@ testset_split_for_seed_102.txt # the instances used as training and test set for
 training_prediction_102.txt # all the training set predictions for all folds of this random seed 
 variable_importance_102.txt # the relative importance of the attributes (data columns) in learning
 
-Provided the MLplot and Var_Imp scripts have run , four files  RF-predictions.csv ,  SVM-predictions.csv, PLS-predictions.csv  
-and  RF_var_imp.csv will be made  these deatail the predictions by each method over the ten fold cross validation and  the variable
+Provided the MLplot and Var_Imp scripts have run four files (RF-predictions.csv ,  SVM-predictions.csv, PLS-predictions.csv  
+and  RF_var_imp.csv) will be made. These detail the predictions by each method over the ten fold cross validation and the variable
 importance  from RF. Four  plots are  also then made from these four files. rf.png, svm.png, pls.png and  RF-variable -importance.png these show the average prediction for each method  and a line of best fit  and a box  plot of the most important descriptors. 
 
 ### End:===================================== </br>
