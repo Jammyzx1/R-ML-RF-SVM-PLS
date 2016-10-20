@@ -107,6 +107,8 @@ random_seed,description,error_metric,algorithm,error_value
 102,overall,RMSE,rf,0.1885
 102,overall,RSQUARED,rf,0.9935
 
+This can be analysed with the excel Macro provided. 
+
 The 'dataset_X' directory also contains one directory for each random seed ('dataset_seed_y' where y is the random seed) with the following files:
 
 error_parameter_optimised_for_each_fold_output_102.txt # internally optimised parameters
